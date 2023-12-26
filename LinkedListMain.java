@@ -20,7 +20,21 @@ public class LinkedListMain {
         list1.appendNode(70);
 
         System.out.println("The list with nodes appended at the end: ");
-        list.displayList();
+        list1.displayList();
         System.out.println("");
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+
+        list2.addNodeAtBeginning(56);
+        list2.appendNode(70);
+        list2.insertNodeAtPosition(30,1);
+        
+
+        System.out.println("The list with node inserted at position1: ");
+        list2.displayList();
+        System.out.println("");
+
+
+
     }
 }

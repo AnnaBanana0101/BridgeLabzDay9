@@ -55,4 +55,57 @@ public class LinkedList<T> {
         }
 
     }
+
+    public int size()
+    {
+        int count=0;
+
+        Node<T> temp =head;
+
+        while(temp!=null)
+        {
+            temp = temp.next;
+            count++;
+        }
+        return count;
+    }
+
+    public void insertNodeAtPosition(int data, int position)
+    {
+        // if(head==null && position!=0)
+        // {
+        //     System.out.println("Empty list");
+        //     return;
+        // }
+        // else if(head==null && position==0)
+        // {
+        //     Node<T> newNode = new Node(data);
+        //     head = newNode;
+        //     return;
+        // }
+        // else 
+        
+        if(position<0 || position>size())
+        {
+            System.out.println("Invalid");
+            return;
+        }
+        Node<T> newNode = new Node(data);
+
+        Node<T> temp=head;
+        
+        if(position==0)
+        {
+            newNode.next = head;
+            head = newNode;
+        }
+
+        for(int i = 0; i<position-1; i++)
+        {
+            temp = temp.next;
+        }
+        
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
 }
