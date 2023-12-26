@@ -152,7 +152,7 @@ public class LinkedList<T> {
 
         while(curr_node!=null)
         {
-            if(curr_node.data == prevNodeData)
+            if(curr_node.data.equals(prevNodeData))
             {
                 curr_node.next = newNode;
                 newNode.next = next_node;
@@ -162,6 +162,29 @@ public class LinkedList<T> {
             curr_node = next_node;
             next_node = next_node.next;
         }
+    }
+
+    public int deleteNodeWithValue(T data)
+    {
+        if(head == null)
+            return 0;
+        
+        Node<T> prev = head;
+        Node<T> curr = head.next;
+
+        while(curr!=null)
+        {
+            if(curr.data.equals(data))
+            {
+                prev.next = curr.next;
+                break;
+            }
+
+            prev = curr;
+            curr = curr.next;
+        }
+
+        return size();
     }
 
 }

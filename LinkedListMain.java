@@ -53,5 +53,13 @@ public class LinkedListMain {
         list.insertAfterNode(40,70);
         list.displayList();
         System.out.println("");
+
+        System.out.println("Delete element 40 in list: ");
+        int size=list.deleteNodeWithValue(40);
+        list.displayList();
+        System.out.println("");
+        System.out.println("Size: " + size);
+        System.out.println("");
+
     }
 }
