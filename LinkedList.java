@@ -118,4 +118,27 @@ public class LinkedList<T> {
         temp.next = null;
     }
 
+    public int search(T data)
+    {
+        if(head == null)
+        {
+            System.out.println("Empty list");
+            return 0;
+        }
+
+        Node<T> temp = head;
+
+        for(int i=0; i<size(); i++)
+        {
+            if(temp.data.equals(data))
+                return i;
+            temp=temp.next;
+        }
+        if(temp == null)
+        {
+            System.out.println("Element not found");
+        }
+        return 0;
+    }
+
 }

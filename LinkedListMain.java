@@ -44,5 +44,10 @@ public class LinkedListMain {
         list1.displayList();
         System.out.println("");
 
+        System.out.println("Find element 30 in list: ");
+        int position = list.search(30);
+        System.out.println("Position: "+ position);
+        System.out.println("");
+
     }
 }
