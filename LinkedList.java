@@ -13,16 +13,15 @@ public class LinkedList<T> {
 
     public void addNodeAtBeginning(T data){
         Node<T> newNode = new Node(data);
-        if(this.head==null)
+
+        if(head==null)
         {
             head = newNode;
         }
         else
         {
-            Node<T> temp = head.next;
-
-            head.next = newNode;
-            newNode.next = temp;
+            newNode.next = head;
+            head = newNode;
         }
     }
 
