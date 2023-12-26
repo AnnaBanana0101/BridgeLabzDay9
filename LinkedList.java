@@ -103,5 +103,19 @@ public class LinkedList<T> {
         head = head.next;
     }
 
+    public void popLast()
+    {
+        if(head==null)
+            return;
+        
+        Node<T> temp =head;
+
+        while(temp.next.next!=null)
+        {
+            temp = temp.next;
+        }
+
+        temp.next = null;
+    }
 
 }

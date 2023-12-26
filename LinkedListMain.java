@@ -39,7 +39,10 @@ public class LinkedListMain {
         list2.displayList();
         System.out.println("");
 
-        
+        System.out.println("The list with tail popped: ");
+        list1.popLast();;
+        list1.displayList();
+        System.out.println("");
 
     }
 }
