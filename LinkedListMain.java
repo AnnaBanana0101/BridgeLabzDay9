@@ -34,7 +34,12 @@ public class LinkedListMain {
         list2.displayList();
         System.out.println("");
 
+        System.out.println("The list with head popped: ");
+        list2.deleteAtBeginning();
+        list2.displayList();
+        System.out.println("");
 
+        
 
     }
 }

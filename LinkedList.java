@@ -71,20 +71,7 @@ public class LinkedList<T> {
     }
 
     public void insertNodeAtPosition(int data, int position)
-    {
-        // if(head==null && position!=0)
-        // {
-        //     System.out.println("Empty list");
-        //     return;
-        // }
-        // else if(head==null && position==0)
-        // {
-        //     Node<T> newNode = new Node(data);
-        //     head = newNode;
-        //     return;
-        // }
-        // else 
-        
+    {        
         if(position<0 || position>size())
         {
             System.out.println("Invalid");
@@ -108,4 +95,13 @@ public class LinkedList<T> {
         newNode.next = temp.next;
         temp.next = newNode;
     }
+
+    public void deleteAtBeginning()
+    {
+        if(head==null)
+            return;
+        head = head.next;
+    }
+
+
 }
