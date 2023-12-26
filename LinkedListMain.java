@@ -49,5 +49,9 @@ public class LinkedListMain {
         System.out.println("Position: "+ position);
         System.out.println("");
 
+        System.out.println("Insert element 40 after 30 in list: ");
+        list.insertAfterNode(40,70);
+        list.displayList();
+        System.out.println("");
     }
 }

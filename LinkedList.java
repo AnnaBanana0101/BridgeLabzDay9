@@ -141,4 +141,27 @@ public class LinkedList<T> {
         return 0;
     }
 
+    public void insertAfterNode(T data, T prevNodeData)
+    {
+        if(head == null)
+            return;
+        
+        Node<T> newNode = new Node<>(data);
+        Node<T> curr_node = head;
+        Node<T> next_node = head.next;
+
+        while(curr_node!=null)
+        {
+            if(curr_node.data == prevNodeData)
+            {
+                curr_node.next = newNode;
+                newNode.next = next_node;
+                break;
+            }
+
+            curr_node = next_node;
+            next_node = next_node.next;
+        }
+    }
+
 }
