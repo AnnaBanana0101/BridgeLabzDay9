@@ -61,5 +61,13 @@ public class LinkedListMain {
         System.out.println("Size: " + size);
         System.out.println("");
 
+        System.out.println("Ordered Linked list:");
+        OrderedLinkedList<Integer> orderedList = new OrderedLinkedList<>();
+        orderedList.addNode(70);
+        orderedList.addNode(30);
+        orderedList.addNode(56);
+        orderedList.displayList();
+        System.out.println("");
+
     }
 }

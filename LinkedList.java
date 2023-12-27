@@ -1,5 +1,5 @@
 
-public class LinkedList<T> {
+public class LinkedList<T extends Comparable<T>> {
 
     Node<T> head;
 
@@ -12,7 +12,7 @@ public class LinkedList<T> {
     }
 
     public void addNodeAtBeginning(T data){
-        Node<T> newNode = new Node(data);
+        Node<T> newNode = new Node<>(data);
 
         if(head==null)
         {
@@ -29,11 +29,13 @@ public class LinkedList<T> {
     {
         Node <T> temp = head;
 
-        while(temp!=null)
+        while(temp.next!=null)
         {
             System.out.print(temp.data + "->");
             temp = temp.next;
         }
+
+        System.out.println(temp.data);
     }
 
     public void appendNode(T data){
@@ -70,14 +72,14 @@ public class LinkedList<T> {
         return count;
     }
 
-    public void insertNodeAtPosition(int data, int position)
+    public void insertNodeAtPosition(T data, int position)
     {        
         if(position<0 || position>size())
         {
             System.out.println("Invalid");
             return;
         }
-        Node<T> newNode = new Node(data);
+        Node<T> newNode = new Node<>(data);
 
         Node<T> temp=head;
         
@@ -185,6 +187,7 @@ public class LinkedList<T> {
         }
 
         return size();
+
     }
 
 }
